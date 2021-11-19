@@ -1,0 +1,136 @@
+
+.filter {
+    .col();
+    .size(3);
+    .size-md(12);
+
+    margin-top: 40px;
+
+
+    &__title {
+      text-align: center;
+      color: #444444;
+      font-size: 18px;
+    }
+
+    .appcalendar {
+      display: flex;
+      justify-content: center;
+      .md(display, none);
+
+      .ui-datepicker-header {
+        .shadow();
+        background: #fff;
+        border: 1px solid transparent;
+        border-radius: 13px;
+        padding: 13px 30px;
+        font-size: 16px;
+        color: #222;
+        position: relative;
+        text-align: center;
+
+        a {
+          position: absolute;
+          font-size: 0px;
+          display: block;
+          height: 17px;
+          width: 20px;
+          top: 50%;
+          transform: translateY(-8px);
+          cursor: pointer;
+
+            span {
+              position: relative;
+              display: block;
+              height: 100%;
+              width: 100%;
+            }
+
+            .ui-icon-circle-triangle-w::after, .ui-icon-circle-triangle-w::before, .ui-icon-circle-triangle-e::after, .ui-icon-circle-triangle-e::before {
+              content: "";
+              width: 2px;
+              background-color: #222;
+              height: 11px;
+              position: absolute;
+            }
+
+            .ui-icon-circle-triangle-w::before {
+              transform: rotate(47deg);
+              top: 0px;
+            }
+
+            .ui-icon-circle-triangle-w::after {
+              transform: rotate(-47deg);
+            bottom: 0px;
+            }
+
+            .ui-icon-circle-triangle-e::before {
+              transform: rotate(-47deg);
+              top: 0px;
+            }
+            .ui-icon-circle-triangle-e::after {
+              transform: rotate(47deg);
+              bottom: 0px;
+            }
+
+        }
+
+        a.ui-datepicker-prev {
+          left: 10px;
+        }
+
+        a.ui-datepicker-next {
+          right: 10px;
+        }
+
+      }
+
+      table.ui-datepicker-calendar {
+          border-spacing: 4px 9px;
+      }
+
+      thead {
+        span {
+          font-weight: 400;
+          font-size: 12px;
+        }
+      }
+
+      tbody {
+
+        td {
+          text-align: center;
+          position: relative;
+
+            &.ui-datepicker-today:before {
+                position: absolute;
+                content: '';
+                border-radius: 50%;
+                width: 4px;
+                height: 4px;
+                background: #a7d1f1;
+                left: 50%;
+                bottom: 5px;
+                transform: translateX(-2px);
+            }
+        }
+
+        a {
+          color: black;
+          font-size: 12px;
+          display: block;
+          padding: 8px;
+          background: #fff;
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+          text-decoration: none;
+        }
+
+        a.ui-state-active {
+          background: #a7d1f1;
+          color: #fff;
+          box-shadow: 0 5px 10px 0 rgba(255, 255, 255, 0.5);
+        }
+      }
+
+    }
+  }

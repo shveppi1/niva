@@ -1,0 +1,1046 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+@font-face {
+  font-family: 'Kepler296';
+  src: url('/fonts/Kepler296/Kepler296.eot');
+  src: url('/fonts/Kepler296/Kepler296.eot?#') format('embedded-opentype'), url('/fonts/Kepler296/Kepler296.woff') format('woff'), url('/fonts/Kepler296/Kepler296.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/fonts/SourceSansPro/SourceSansPro-Bold.eot');
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url('/fonts/SourceSansPro/SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'), url('/fonts/SourceSansPro/SourceSansPro-Bold.woff2') format('woff2'), url('/fonts/SourceSansPro/SourceSansPro-Bold.woff') format('woff'), url('/fonts/SourceSansPro/SourceSansPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/fonts/SourceSansPro/SourceSansPro-ExtraLightItalic.eot');
+  src: local('Source Sans Pro ExtraLight Italic'), local('SourceSansPro-ExtraLightItalic'), url('/fonts/SourceSansPro/SourceSansPro-ExtraLightItalic.eot?#iefix') format('embedded-opentype'), url('/fonts/SourceSansPro/SourceSansPro-ExtraLightItalic.woff2') format('woff2'), url('/fonts/SourceSansPro/SourceSansPro-ExtraLightItalic.woff') format('woff'), url('/fonts/SourceSansPro/SourceSansPro-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/fonts/SourceSansPro/SourceSansPro-Light.eot');
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url('/fonts/SourceSansPro/SourceSansPro-Light.eot?#iefix') format('embedded-opentype'), url('/fonts/SourceSansPro/SourceSansPro-Light.woff2') format('woff2'), url('/fonts/SourceSansPro/SourceSansPro-Light.woff') format('woff'), url('/fonts/SourceSansPro/SourceSansPro-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/fonts/SourceSansPro/SourceSansPro-BoldItalic.eot');
+  src: local('Source Sans Pro Bold Italic'), local('SourceSansPro-BoldItalic'), url('/fonts/SourceSansPro/SourceSansPro-BoldItalic.eot?#iefix') format('embedded-opentype'), url('/fonts/SourceSansPro/SourceSansPro-BoldItalic.woff2') format('woff2'), url('/fonts/SourceSansPro/SourceSansPro-BoldItalic.woff') format('woff'), url('/fonts/SourceSansPro/SourceSansPro-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/fonts/SourceSansPro/SourceSansPro-LightItalic.eot');
+  src: local('Source Sans Pro Light Italic'), local('SourceSansPro-LightItalic'), url('/fonts/SourceSansPro/SourceSansPro-LightItalic.eot?#iefix') format('embedded-opentype'), url('/fonts/SourceSansPro/SourceSansPro-LightItalic.woff2') format('woff2'), url('/fonts/SourceSansPro/SourceSansPro-LightItalic.woff') format('woff'), url('/fonts/SourceSansPro/SourceSansPro-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/fonts/SourceSansPro/SourceSansPro-Black.eot');
+  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'), url('/fonts/SourceSansPro/SourceSansPro-Black.eot?#iefix') format('embedded-opentype'), url('/fonts/SourceSansPro/SourceSansPro-Black.woff2') format('woff2'), url('/fonts/SourceSansPro/SourceSansPro-Black.woff') format('woff'), url('/fonts/SourceSansPro/SourceSansPro-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/fonts/SourceSansPro/SourceSansPro-Regular.eot');
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url('/fonts/SourceSansPro/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'), url('/fonts/SourceSansPro/SourceSansPro-Regular.woff2') format('woff2'), url('/fonts/SourceSansPro/SourceSansPro-Regular.woff') format('woff'), url('/fonts/SourceSansPro/SourceSansPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/fonts/SourceSansPro/SourceSansPro-SemiBold.eot');
+  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url('/fonts/SourceSansPro/SourceSansPro-SemiBold.eot?#iefix') format('embedded-opentype'), url('/fonts/SourceSansPro/SourceSansPro-SemiBold.woff2') format('woff2'), url('/fonts/SourceSansPro/SourceSansPro-SemiBold.woff') format('woff'), url('/fonts/SourceSansPro/SourceSansPro-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/fonts/SourceSansPro/SourceSansPro-Italic.eot');
+  src: local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url('/fonts/SourceSansPro/SourceSansPro-Italic.eot?#iefix') format('embedded-opentype'), url('/fonts/SourceSansPro/SourceSansPro-Italic.woff2') format('woff2'), url('/fonts/SourceSansPro/SourceSansPro-Italic.woff') format('woff'), url('/fonts/SourceSansPro/SourceSansPro-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/fonts/SourceSansPro/SourceSansPro-SemiBoldItalic.eot');
+  src: local('Source Sans Pro SemiBold Italic'), local('SourceSansPro-SemiBoldItalic'), url('/fonts/SourceSansPro/SourceSansPro-SemiBoldItalic.eot?#iefix') format('embedded-opentype'), url('/fonts/SourceSansPro/SourceSansPro-SemiBoldItalic.woff2') format('woff2'), url('/fonts/SourceSansPro/SourceSansPro-SemiBoldItalic.woff') format('woff'), url('/fonts/SourceSansPro/SourceSansPro-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/fonts/SourceSansPro/SourceSansPro-BlackItalic.eot');
+  src: local('Source Sans Pro Black Italic'), local('SourceSansPro-BlackItalic'), url('/fonts/SourceSansPro/SourceSansPro-BlackItalic.eot?#iefix') format('embedded-opentype'), url('/fonts/SourceSansPro/SourceSansPro-BlackItalic.woff2') format('woff2'), url('/fonts/SourceSansPro/SourceSansPro-BlackItalic.woff') format('woff'), url('/fonts/SourceSansPro/SourceSansPro-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/fonts/SourceSansPro/SourceSansPro-ExtraLight.eot');
+  src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url('/fonts/SourceSansPro/SourceSansPro-ExtraLight.eot?#iefix') format('embedded-opentype'), url('/fonts/SourceSansPro/SourceSansPro-ExtraLight.woff2') format('woff2'), url('/fonts/SourceSansPro/SourceSansPro-ExtraLight.woff') format('woff'), url('/fonts/SourceSansPro/SourceSansPro-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/rubik/Rubik-BlackItalic.eot');
+  src: local('Rubik Black Italic'), local('Rubik-BlackItalic'), url('/fonts/rubik/Rubik-BlackItalic.eot?#iefix') format('embedded-opentype'), url('/fonts/rubik/Rubik-BlackItalic.woff2') format('woff2'), url('/fonts/rubik/Rubik-BlackItalic.woff') format('woff'), url('/fonts/rubik/Rubik-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/rubik/Rubik-Bold.eot');
+  src: local('Rubik Bold'), local('Rubik-Bold'), url('/fonts/rubik/Rubik-Bold.eot?#iefix') format('embedded-opentype'), url('/fonts/rubik/Rubik-Bold.woff2') format('woff2'), url('/fonts/rubik/Rubik-Bold.woff') format('woff'), url('/fonts/rubik/Rubik-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/rubik/Rubik-BoldItalic.eot');
+  src: local('Rubik Bold Italic'), local('Rubik-BoldItalic'), url('/fonts/rubik/Rubik-BoldItalic.eot?#iefix') format('embedded-opentype'), url('/fonts/rubik/Rubik-BoldItalic.woff2') format('woff2'), url('/fonts/rubik/Rubik-BoldItalic.woff') format('woff'), url('/fonts/rubik/Rubik-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/rubik/Rubik-Medium.eot');
+  src: local('Rubik Medium'), local('Rubik-Medium'), url('/fonts/rubik/Rubik-Medium.eot?#iefix') format('embedded-opentype'), url('/fonts/rubik/Rubik-Medium.woff2') format('woff2'), url('/fonts/rubik/Rubik-Medium.woff') format('woff'), url('/fonts/rubik/Rubik-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/rubik/Rubik-Italic.eot');
+  src: local('Rubik Italic'), local('Rubik-Italic'), url('/fonts/rubik/Rubik-Italic.eot?#iefix') format('embedded-opentype'), url('/fonts/rubik/Rubik-Italic.woff2') format('woff2'), url('/fonts/rubik/Rubik-Italic.woff') format('woff'), url('/fonts/rubik/Rubik-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/rubik/Rubik-MediumItalic.eot');
+  src: local('Rubik Medium Italic'), local('Rubik-MediumItalic'), url('/fonts/rubik/Rubik-MediumItalic.eot?#iefix') format('embedded-opentype'), url('/fonts/rubik/Rubik-MediumItalic.woff2') format('woff2'), url('/fonts/rubik/Rubik-MediumItalic.woff') format('woff'), url('/fonts/rubik/Rubik-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/rubik/Rubik-Regular.eot');
+  src: local('Rubik Regular'), local('Rubik-Regular'), url('/fonts/rubik/Rubik-Regular.eot?#iefix') format('embedded-opentype'), url('/fonts/rubik/Rubik-Regular.woff2') format('woff2'), url('/fonts/rubik/Rubik-Regular.woff') format('woff'), url('/fonts/rubik/Rubik-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/rubik/Rubik-Black.eot');
+  src: local('Rubik Black'), local('Rubik-Black'), url('/fonts/rubik/Rubik-Black.eot?#iefix') format('embedded-opentype'), url('/fonts/rubik/Rubik-Black.woff2') format('woff2'), url('/fonts/rubik/Rubik-Black.woff') format('woff'), url('/fonts/rubik/Rubik-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/rubik/Rubik-Light.eot');
+  src: local('Rubik Light'), local('Rubik-Light'), url('/fonts/rubik/Rubik-Light.eot?#iefix') format('embedded-opentype'), url('/fonts/rubik/Rubik-Light.woff2') format('woff2'), url('/fonts/rubik/Rubik-Light.woff') format('woff'), url('/fonts/rubik/Rubik-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/rubik/Rubik-LightItalic.eot');
+  src: local('Rubik Light Italic'), local('Rubik-LightItalic'), url('/fonts/rubik/Rubik-LightItalic.eot?#iefix') format('embedded-opentype'), url('/fonts/rubik/Rubik-LightItalic.woff2') format('woff2'), url('/fonts/rubik/Rubik-LightItalic.woff') format('woff'), url('/fonts/rubik/Rubik-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+body {
+  background-color: #f7f8fc;
+  font-family: "Nunito", "Rubik", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: black;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media screen and (max-width: 970px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.row-fl {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.flex {
+  display: flex;
+}
+a {
+  color: #fff;
+}
+.not-margin {
+  margin: 0;
+}
+.section_title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 500;
+}
+.btn.btn_red-o {
+  background: none;
+  border: 1px solid #E33027;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), inset -4px -4px 4px rgba(0, 0, 0, 0.25), inset 4px 4px 4px #860AF5;
+  border-radius: 19px;
+  padding: 10px 38px;
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.btn-def {
+  font-size: 12px;
+  background: #7200D9;
+}
+.btn:hover {
+  background: #7200D9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), inset -4px -4px 4px rgba(0, 0, 0, 0.3), inset 4px 4px 4px #A442FC;
+  border-radius: 19px;
+}
+.nav-toggle {
+  width: 40px;
+  height: 26px;
+  cursor: pointer;
+  position: relative;
+  margin: 10px;
+}
+.nav-toggle__item {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #222;
+  position: absolute;
+  left: 0;
+  border-radius: 50px;
+  transition: 0.3s all linear;
+}
+.nav-toggle__item-first {
+  top: 0;
+}
+.nav-toggle__item-second,
+.nav-toggle__item-third {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.nav-toggle__item-fourth {
+  bottom: 0;
+}
+.active .nav-toggle__item-first,
+.active .nav-toggle__item-fourth {
+  opacity: 0;
+}
+.active .nav-toggle__item-second {
+  transform: translateY(-50%) rotate(45deg);
+}
+.active .nav-toggle__item-third {
+  transform: translateY(-50%) rotate(-45deg);
+}
+.header {
+  background: #fff;
+  width: 100%;
+  max-height: 60px;
+  min-height: 50px;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #222;
+  z-index: 100;
+  color: black;
+}
+.header__container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.header__logo {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-left: 0px;
+  position: relative;
+  font-family: Kepler296;
+  font-size: 28px;
+  color: #fff;
+  padding-right: 20px;
+}
+.header__logo span {
+  color: #a7d1f1;
+}
+.header__logo a {
+  z-index: 2;
+  color: #fff;
+  text-decoration: none;
+}
+.header__logo a > span {
+  color: #a7d1f1;
+}
+.header__logo::before {
+  position: absolute;
+  content: '';
+  display: block;
+  z-index: -1;
+  top: -50px;
+  left: -1000px;
+  right: 0;
+  bottom: -9px;
+  background: #222;
+}
+.header__logo::after {
+  position: absolute;
+  content: '';
+  display: block;
+  z-index: -1;
+  left: 100%;
+  top: -9px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 58px 30px 0 0;
+  border-color: #222 transparent transparent transparent;
+}
+.header__menublock {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-left: 30px;
+}
+.header__nav {
+  display: none;
+  margin-left: auto;
+}
+@media screen and (max-width: 970px) {
+  .header__nav {
+    display: block;
+  }
+}
+.header__menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 0;
+  list-style: none;
+  height: 50px;
+  margin: 0 30px;
+  align-items: stretch;
+}
+@media screen and (max-width: 970px) {
+  .header__menu {
+    display: none;
+  }
+}
+.header__menu > li {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+}
+.header__menu > li a {
+  color: black;
+  text-decoration: none;
+  transition: all 300ms;
+}
+.header__menu > li a:hover {
+  color: #a7d1f1;
+}
+.header__submenu {
+  display: none;
+}
+.header__search {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  position: relative;
+  margin-left: auto;
+}
+.header__search .searchform {
+  display: none;
+  position: absolute;
+  top: -70px;
+  right: 0px;
+}
+.header__accaunt {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.filter {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% / 12 * 3 - 30px);
+  margin-top: 40px;
+}
+@media screen and (max-width: 970px) {
+  .filter {
+    width: calc(100% / 12 * 12 - 30px);
+  }
+}
+.filter__title {
+  text-align: center;
+  color: #444444;
+  font-size: 18px;
+}
+.filter .appcalendar {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 970px) {
+  .filter .appcalendar {
+    display: none;
+  }
+}
+.filter .appcalendar .ui-datepicker-header {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 13px;
+  padding: 13px 30px;
+  font-size: 16px;
+  color: #222;
+  position: relative;
+  text-align: center;
+}
+.filter .appcalendar .ui-datepicker-header a {
+  position: absolute;
+  font-size: 0px;
+  display: block;
+  height: 17px;
+  width: 20px;
+  top: 50%;
+  transform: translateY(-8px);
+  cursor: pointer;
+}
+.filter .appcalendar .ui-datepicker-header a span {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.filter .appcalendar .ui-datepicker-header a .ui-icon-circle-triangle-w::after,
+.filter .appcalendar .ui-datepicker-header a .ui-icon-circle-triangle-w::before,
+.filter .appcalendar .ui-datepicker-header a .ui-icon-circle-triangle-e::after,
+.filter .appcalendar .ui-datepicker-header a .ui-icon-circle-triangle-e::before {
+  content: "";
+  width: 2px;
+  background-color: #222;
+  height: 11px;
+  position: absolute;
+}
+.filter .appcalendar .ui-datepicker-header a .ui-icon-circle-triangle-w::before {
+  transform: rotate(47deg);
+  top: 0px;
+}
+.filter .appcalendar .ui-datepicker-header a .ui-icon-circle-triangle-w::after {
+  transform: rotate(-47deg);
+  bottom: 0px;
+}
+.filter .appcalendar .ui-datepicker-header a .ui-icon-circle-triangle-e::before {
+  transform: rotate(-47deg);
+  top: 0px;
+}
+.filter .appcalendar .ui-datepicker-header a .ui-icon-circle-triangle-e::after {
+  transform: rotate(47deg);
+  bottom: 0px;
+}
+.filter .appcalendar .ui-datepicker-header a.ui-datepicker-prev {
+  left: 10px;
+}
+.filter .appcalendar .ui-datepicker-header a.ui-datepicker-next {
+  right: 10px;
+}
+.filter .appcalendar table.ui-datepicker-calendar {
+  border-spacing: 4px 9px;
+}
+.filter .appcalendar thead span {
+  font-weight: 400;
+  font-size: 12px;
+}
+.filter .appcalendar tbody td {
+  text-align: center;
+  position: relative;
+}
+.filter .appcalendar tbody td.ui-datepicker-today:before {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  background: #a7d1f1;
+  left: 50%;
+  bottom: 5px;
+  transform: translateX(-2px);
+}
+.filter .appcalendar tbody a {
+  color: black;
+  font-size: 12px;
+  display: block;
+  padding: 8px;
+  background: #fff;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+.filter .appcalendar tbody a.ui-state-active {
+  background: #a7d1f1;
+  color: #fff;
+  box-shadow: 0 5px 10px 0 rgba(255, 255, 255, 0.5);
+}
+.search_line {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% / 12 * 12 - 30px);
+  margin-bottom: 40px;
+}
+.search_line__input {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% / 12 * 9 - 30px);
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent;
+  outline: none;
+  border-radius: 24px;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: #222;
+  transition: all 250ms;
+}
+@media screen and (max-width: 970px) {
+  .search_line__input {
+    width: calc(100% / 12 * 12 - 30px);
+  }
+}
+.search_line__input::-moz-placeholder {
+  color: #9e9e9e;
+}
+.search_line__input:-ms-input-placeholder {
+  color: #9e9e9e;
+}
+.search_line__input::placeholder {
+  color: #9e9e9e;
+}
+.search_line__next,
+.search_line__prev {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 66px;
+  height: 50px;
+  background: #fff;
+  border-radius: 13px;
+  position: relative;
+  cursor: pointer;
+  color: #222;
+  transition: all 250ms;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 970px) {
+  .search_line__next {
+    margin: 20px 15px 0px auto;
+  }
+}
+.search_line__prev {
+  margin-left: auto;
+}
+@media screen and (max-width: 970px) {
+  .search_line__prev {
+    margin-top: 20px;
+    margin-left: 15px;
+  }
+}
+.search_line__prev::after,
+.search_line__prev::before,
+.search_line__next::after,
+.search_line__next::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: #222;
+  height: 13px;
+  top: 2px;
+}
+.search_line__prev:before,
+.search_line__prev:after {
+  left: 50%;
+  margin-left: -4px;
+}
+.search_line__next:after,
+.search_line__next:before {
+  left: 50%;
+  margin-right: -4px;
+}
+.search_line__prev:before {
+  transform: rotate(47deg);
+  top: 13px;
+}
+.search_line__prev:after {
+  transform: rotate(-47deg);
+  top: 21px;
+}
+.search_line__next:before {
+  transform: rotate(-47deg);
+  top: 13px;
+}
+.search_line__next:after {
+  transform: rotate(47deg);
+  top: 21px;
+}
+.serdate {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% / 12 * 9 - 30px);
+  margin-top: 40px;
+}
+@media screen and (max-width: 970px) {
+  .serdate {
+    width: calc(100% / 12 * 12 - 30px);
+  }
+}
+.serdate__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.serdate__item {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% / 12 * 6 - 30px);
+  height: 90px;
+  border-radius: 10px;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 970px) {
+  .serdate__item {
+    width: calc(100% / 12 * 12 - 30px);
+  }
+}
+.serdate__poster {
+  height: 90px;
+  margin-right: 10px;
+}
+.serdate__poster img {
+  height: 90px;
+  width: 135px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px 0px 0px 10px;
+}
+.serdate__ri {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 8px;
+  width: 100%;
+  overflow: hidden;
+}
+.serdate__name {
+  margin-bottom: auto;
+  max-height: 40px;
+  overflow: hidden;
+}
+.serdate__season {
+  display: flex;
+  height: 20px;
+  font-size: 14px;
+  color: #969696;
+}
+.serdate__season .dotted {
+  border-bottom: 1px dotted #969696;
+  display: flex;
+  width: 200px;
+  flex-shrink: 1;
+}
+.serdate__number {
+  flex-shrink: 0;
+}
+.serdate__date {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.calendar_section {
+  padding: 90px 0px 75px;
+}
+.line_b {
+  background-color: #222;
+  height: 4px;
+  width: 100%;
+}
+h2.title {
+  text-align: center;
+}
+.news .wrap {
+  background: #222;
+  color: #fff;
+}
+.news .title {
+  margin-top: 5px;
+}
+.debugGrid {
+  z-index: 999;
+}
+
