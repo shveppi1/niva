@@ -24,14 +24,14 @@ return [
     // ----
 
     // Project name. Shown in the window title.
-    'project_name' => 'Backpack Admin Panel',
+    'project_name' => 'showfy.ru :: Админка',
 
     // When clicking on the admin panel's top-left logo/name,
     // where should the user be redirected?
     // The string below will be passed through the url() helper.
     // - default: '' (project root)
     // - alternative: 'admin' (the admin's dashboard)
-    'home_link' => '',
+    'home_link' => 'showfy.ru',
 
     // Content of the HTML meta robots tag to prevent indexing and link following
     'meta_robots_content' => 'noindex, nofollow',
@@ -65,6 +65,7 @@ return [
     // CSS files that are loaded in all pages, using Laravel's mix() helper
     'mix_styles' => [ // file_path => manifest_directory_path
         // 'css/app.css' => '',
+         'css/admin.css' => '',
     ],
 
     // ------
@@ -72,7 +73,7 @@ return [
     // ------
 
     // Menu logo. You can replace this with an <img> tag if you have a logo.
-    'project_logo'   => '<b>Back</b>pack',
+    'project_logo'   => '<b>SHOWFY.FU</b>',
 
     // Show / hide breadcrumbs on admin panel pages.
     'breadcrumbs' => true,
@@ -106,13 +107,13 @@ return [
     // change background color with bg-dark, bg-primary, bg-secondary, bg-danger, bg-warning, bg-success, bg-info, bg-blue, bg-light-blue, bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan, bg-white
 
     // Developer or company name. Shown in footer.
-    'developer_name' => 'Cristian Tabacitu',
+    'developer_name' => '',
 
     // Developer website. Link in footer. Type false if you want to hide it.
-    'developer_link' => 'http://tabacitu.ro',
+    'developer_link' => '',
 
     // Show powered by Laravel Backpack in the footer? true/false
-    'show_powered_by' => true,
+    'show_powered_by' => false,
 
     // -------
     // SCRIPTS
@@ -141,6 +142,7 @@ return [
     // JS files that are loaded in all pages, using Laravel's mix() helper
     'mix_scripts' => [// file_path => manifest_directory_path
         // 'js/app.js' => '',
+        'js/admin.js' => '',
     ],
 
     // -------------

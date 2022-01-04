@@ -1,0 +1,91 @@
+models:
+  Movie:
+    name: string:400
+    name_original: string nullable
+    alt_name: string nullable
+    slug: string unique
+    category_id: id foreign
+    description: text nullable
+    status_movie: string nullable comment:съемки
+    tagline: string nullable comment:слоган
+    year: integer unsigned nullable
+    chanel: string nullable
+    language: string nullable
+    duration: string nullable
+    source_url: text nullable
+    picture: string nullable
+    screen_url: string nullable
+    date_pub_rus:  nullable timestamp
+    date_pub_world:  nullable timestamp
+    published_at: nullable timestamp
+    status: enum:PUBLISHED,DISABLE,MODERATION default:'MODERATION'
+    author_id: id:user
+    relationships:
+      hasMany: Season
+      belongsToMany: Person, Genre, Collection
+
+  Person:
+    name: string:400
+    name_original: string nullable
+    slug: string unique
+    birthday: string nullable
+    biography: text nullable
+    inst: string nullable
+    twitter: string nullable
+    picture: string nullable
+    status: enum:PUBLISHED,DISABLE,MODERATION default:'MODERATION'
+    author_id: id:user
+    relationships:
+      belongsToMany: Movie, Serie
+
+  Category:
+    name: string
+    slug: string unique
+    description: text nullable
+    picture: string nullable
+    depth: integer unsigned nullable
+    lft: integer unsigned nullable
+    rgt: integer unsigned nullable
+    relationships:
+      hasMany: Movie
+
+  Genre:
+    name: string
+    slug: string unique
+    relationships:
+      belongsToMany: Movie
+
+  Collection:
+    name: string
+    slug: string unique
+    description: text nullable
+    picture: string nullable
+    status: enum:PUBLISHED,DISABLE,MODERATION default:'MODERATION'
+    relationships:
+      belongsToMany: Movie
+
+  Serie:
+    name: string
+    or_name: string nullable
+    number: integer unsigned
+    description: text nullable
+    realease_date: nullable timestamp
+    picture: string nullable
+    season_id: id foreign
+    relationships:
+      belongsToMany: Person
+
+  Season:
+    name: string nullable
+    og_name: string nullable
+    description: text nullable
+    picture: string nullable
+    number: integer unsigned
+    movie_id: id foreign
+    relationships:
+      hasMany: Serie
+
+
+
+
+seeders: Movie, Person, Category, Genre, Collection, Serie, Season

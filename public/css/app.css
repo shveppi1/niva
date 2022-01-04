@@ -463,6 +463,15 @@ template {
   font-weight: 300;
   font-style: italic;
 }
+#myProgress {
+  width: 100%;
+  background-color: grey;
+}
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: green;
+}
 body {
   background-color: #f7f8fc;
   font-family: "Nunito", "Rubik", Helvetica, Arial, sans-serif;
@@ -1002,6 +1011,7 @@ a {
   margin-bottom: auto;
   max-height: 40px;
   overflow: hidden;
+  color: black;
 }
 .serdate__season {
   display: flex;
@@ -1021,6 +1031,153 @@ a {
 .serdate__date {
   margin-left: auto;
   flex-shrink: 0;
+}
+.serials {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.serials__item {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% / 12 * 2 - 30px);
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 970px) {
+  .serials__item {
+    width: calc(100% / 12 * 2 - 30px);
+  }
+}
+.serials__item img {
+  max-width: 100%;
+}
+.page_section {
+  padding: 50px 0px 75px;
+}
+.serialDetail__top {
+  background-image: url(/img/h.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 50px 0;
+  position: relative;
+  z-index: 0;
+}
+.serialDetail__top:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: -1;
+}
+.serialDetail .posterBlock {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% / 12 * 3 - 30px);
+}
+.serialDetail .posterBlock img {
+  height: 370px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+.serialDetail .inform {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% / 12 * 9 - 30px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  font-size: 18px;
+  color: #fff;
+}
+.serialDetail .title_block {
+  margin: 30px 0 0;
+  background: #fff;
+  padding: 4px 0px;
+  position: relative;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.serialDetail .title_block .title_val {
+  margin-right: 30px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% / 12 * 6 - 30px);
+}
+.serialDetail .title_block h2 {
+  margin: 0;
+}
+.serialDetail .title_block .name_org {
+  color: grey;
+  font-size: 16px;
+}
+.serialDetail .title_block ul.navigation {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 0px 0px;
+  list-style: none;
+}
+.serialDetail .title_block ul.navigation li {
+  margin: 15px;
+}
+.serialDetail .serialContainer {
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+.serialDetail .serialContainer .leftCont {
+  width: auto;
+  flex-grow: 1;
+  background: #fff;
+  padding: 30px 20px;
+}
+.serialDetail .serialContainer .rightCont {
+  width: 100px;
+  background: #222;
+  padding: 30px 20px;
+}
+.serialDetail .serialContainer .rightCont ul {
+  margin: 0px;
+  color: #fff;
+  list-style: none;
+  padding: 0px;
+}
+.serialDetail .serialContainer .rightCont ul li.tab_nav {
+  padding: 20px 0px;
+}
+.serialDetail .serialContainer .serdate__item {
+  width: calc(100% / 12 * 4 - 30px);
+  height: 85px;
+}
+.serialDetail .serialContainer .serdate__poster {
+  height: 85px;
+  width: 90px;
+}
+.serialDetail .serialContainer .serdate__poster img {
+  height: 85px;
+  width: 90px;
+}
+.serialDetail .serialContainer .serdate__name {
+  font-size: 13px;
+}
+.serialDetail .season_tab {
+  display: none;
+}
+.serialDetail .season_tab.active {
+  display: block;
 }
 .calendar_section {
   padding: 90px 0px 75px;

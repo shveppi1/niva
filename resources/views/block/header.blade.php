@@ -1,12 +1,12 @@
 <div class="header">
     <div class="header__container">
         <div class="header__logo">
-            Showfy<span>.ru</span>
+            <a href="/">Showfy<span>.ru</span></a>
         </div>
 
         <ul class="header__menu">
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Сериалы</a></li>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/serials">Сериалы</a></li>
             <li><a href="#">Новинки</a></li>
             <li><a href="#">Календарь</a></li>
             <li><a href="#">Новости</a></li>

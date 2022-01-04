@@ -1,0 +1,53 @@
+.seasonsTab {
+    background: #fbfbfb;
+    margin-bottom: 20px;
+
+    &__number {
+        padding: 10px 25px;
+        font-weight: bold;
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0, 0.1);
+        border-radius: 28px;
+        cursor: pointer;
+    }
+
+    &__picture img {
+        max-height: 110px;
+    }
+
+    &__name {
+        min-width: 300px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name-strong {
+        font-weight: bold;
+    }
+
+    &__desc {
+        max-height: 120px;
+        overflow: hidden;
+    }
+
+    &__action {
+        margin-top: auto;
+
+    }
+
+}
+
+.season__series {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}

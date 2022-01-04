@@ -1,0 +1,54 @@
+@import "./admin/_serials_create.less";
+
+.header_button_creat {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.create_search_tmdb {
+    background: #2c333e;
+    color: white;
+    padding: 7px 16px;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.2);
+}
+
+#pars_search_res {
+    display: flex;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.serres {
+    font-size: 12px;
+
+    &__item {
+        width: 300px;
+        margin: 0 15px;
+        border: 1px solid #f1f4f8;
+        display: flex;
+        box-shadow: 0 0 10px #e4e4e5;
+        cursor: pointer;
+    }
+
+
+    img {
+        height: 130px;
+        margin-right: 4px;
+        width: 100px;
+    }
+
+    &__info {
+        width: auto;
+        flex-grow: 2;
+        overflow: hidden;
+    }
+
+    &__desc {
+        max-height: 75px;
+        overflow: hidden;
+    }
+
+}
+

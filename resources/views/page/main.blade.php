@@ -28,100 +28,34 @@
 
                 <div class="serdate__wrap">
 
+                    @foreach($serials as $serial)
 
 
-                    <div class="serdate__item">
+                        <a href="{{  route('serial-detail', ['slug' => $serial->season->movie->slug])  }}" class="serdate__item" data-seriaId="{{$serial->id}}">
 
 
-                        <div class="serdate__poster">
-                            <img src="/img/sherlock.jpg" alt="">
-                        </div>
-
-                        <div class="serdate__ri">
-                            <div class="serdate__name">Шерлок</div>
-                            <div class="serdate__season">
-                                <div class="serdate__number">s1@e04</div>
-                                <div class="dotted"></div>
-                                <div class="serdate__date">02.09.2021</div>
+                            <div class="serdate__poster">
+                                @if($serial->season->movie->picture)
+                                    <img src="{{ asset('/storage/poster/serial') . '/' .  $serial->season->movie->picture }}" alt="{{ $serial->season->movie->name }}">
+                                @else
+                                    <img src="{{ asset('/storage/poster/') . '/no-image1.jpg'  }}" alt="">
+                                @endif
                             </div>
-                        </div>
 
-                    </div>
-
-
-                    <div class="serdate__item">
-
-
-                        <div class="serdate__poster">
-                            <img src="/img/sherlock.jpg" alt="">
-                        </div>
-
-                        <div class="serdate__ri">
-                            <div class="serdate__name">Шерлок</div>
-                            <div class="serdate__season">
-                                <div class="serdate__number">s1@e04</div>
-                                <div class="dotted"></div>
-                                <div class="serdate__date">02.09.2021</div>
+                            <div class="serdate__ri">
+                                <div class="serdate__name">{{ $serial->season->movie->name }}</div>
+                                <div class="serdate__season">
+                                    <div class="serdate__number">s{{ $serial->season->number }}@e{{ $serial->number }}</div>
+                                    <div class="dotted"></div>
+                                    <div class="serdate__date">{{ $serial->realease_date->format('d.m.Y')  }}</div>
+                                </div>
                             </div>
-                        </div>
 
-                    </div>
-
-                    <div class="serdate__item">
+                        </a>
 
 
-                        <div class="serdate__poster">
-                            <img src="/img/sherlock.jpg" alt="">
-                        </div>
+                    @endforeach
 
-                        <div class="serdate__ri">
-                            <div class="serdate__name">Шерлок</div>
-                            <div class="serdate__season">
-                                <div class="serdate__number">s1@e04</div>
-                                <div class="dotted"></div>
-                                <div class="serdate__date">02.09.2021</div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="serdate__item">
-
-
-                        <div class="serdate__poster">
-                            <img src="/img/sherlock.jpg" alt="">
-                        </div>
-
-                        <div class="serdate__ri">
-                            <div class="serdate__name">Шерлок</div>
-                            <div class="serdate__season">
-                                <div class="serdate__number">s1@e04</div>
-                                <div class="dotted"></div>
-                                <div class="serdate__date">02.09.2021</div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="serdate__item">
-
-
-                        <div class="serdate__poster">
-                            <img src="/img/sherlock.jpg" alt="">
-                        </div>
-
-                        <div class="serdate__ri">
-                            <div class="serdate__name">Шерлок</div>
-                            <div class="serdate__season">
-                                <div class="serdate__number">s1@e04</div>
-                                <div class="dotted"></div>
-                                <div class="serdate__date">02.09.2021</div>
-                            </div>
-                        </div>
-
-                    </div>
 
 
 
@@ -159,6 +93,7 @@
 
 </section>
 
+{{--
 
 <section class="news">
 
@@ -194,5 +129,6 @@
 
 </section>
 
+--}}
 
 @endsection

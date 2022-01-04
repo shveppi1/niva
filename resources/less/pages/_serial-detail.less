@@ -1,0 +1,147 @@
+.page_section {
+    padding: 50px 0px 75px;
+}
+
+.serialDetail {
+
+    &__top {
+        background-image: url(/img/h.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        padding: 50px 0;
+        position: relative;
+        z-index: 0;
+
+    }
+
+    &__top:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0,0,0, 0.9);
+        z-index: -1;
+    }
+
+    .posterBlock {
+        .col();
+        .size(3);
+
+        img {
+            height: 370px;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    .inform {
+        .col();
+        .size(9);
+        .shadow();
+        padding: 15px;
+        font-size: 18px;
+        color: #fff;
+    }
+
+
+    .title_block {
+        margin: 30px 0 0;
+        background: #fff;
+        padding: 4px 0px;
+        position: relative;
+        .shadow();
+
+        .title_val {
+            margin-right: 30px;
+            .col();
+            .size(6)
+        }
+
+        h2 {
+            margin: 0;
+        }
+
+        .name_org {
+            color: grey;
+            font-size: 16px;
+        }
+
+        ul.navigation {
+            .col();
+            display: flex;
+            align-items: center;
+            margin: 0px 0px 0px 0px;
+            list-style: none;
+
+            li {
+                margin: 15px;
+            }
+        }
+
+    }
+
+    .serialContainer {
+
+        margin-top: 40px;
+        box-sizing: border-box;
+
+        .leftCont {
+            width: auto;
+            flex-grow: 1;
+            background: #fff;
+            padding: 30px 20px;
+        }
+
+
+        .rightCont {
+            width: 100px;
+            background: #222;
+            padding: 30px 20px;
+
+            ul {
+                margin: 0px;
+                color: #fff;
+                list-style: none;
+                padding: 0px;
+
+                li.tab_nav {
+                    padding: 20px 0px;
+                }
+            }
+        }
+
+
+        .serdate__item {
+            .size(4);
+            height: 85px;
+        }
+
+        .serdate__poster  {
+            height: 85px;
+            width: 90px;
+            img {
+                height: 85px;
+                width: 90px;
+            }
+        }
+
+        .serdate__name {
+            font-size: 13px;
+        }
+
+    }
+
+
+    .season_tab {
+        display: none;
+    }
+
+    .season_tab.active {
+        display: block;
+    }
+
+}
+
