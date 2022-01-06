@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Country;
 use App\Models\Genre;
 use App\Models\Movie;
+use App\Models\Network;
 use App\Models\Season;
 use App\Models\Serie;
 use App\Models\Trailer;
@@ -275,7 +277,35 @@ class ParserController extends Controller
             $movie->save();
 
 
+            // Каналы
+            if(count($res->networks) > 0) {
+                $network_ids = [];
+                foreach($res->networks as $network){
+                    if($network_up = Network::where('name', $network['name'])->first()){
+                        $network_ids[] = $network_up->id;
+                    } else {
 
+                        if (!isset($config)) {
+                            $config = getConfigTmdb();
+                        }
+
+                        $logo_url = $config->images['secure_base_url'] . 'original' . $network['logo_path'];
+
+                        $newNetwork = Network::create([
+                            'name' => $network['name'],
+                            'picture' => $logo_url,
+                            'slug' => Str::slug($network['name'], '-')
+                        ]);
+                        $network_ids[] = $newNetwork->id;
+                    }
+                }
+
+                if(count($network_ids) > 0) {
+                    $movie->networks()->sync($network_ids);
+                }
+            }
+
+            // Жанры
             if(count($res->genres) > 0) {
                 $genre_ids = [];
                 foreach($res->genres as $genre){
@@ -295,6 +325,28 @@ class ParserController extends Controller
                 }
             }
 
+            // Страны
+            if(count($res->origin_country) > 0) {
+                $country_ids = [];
+                foreach($res->origin_country as $country){
+                    if($country_up = Country::where('name_eng', $country)->first()){
+                        $country_ids[] = $country_up->id;
+                    } else {
+                        $newCountry = Country::create([
+                            'name_eng' => $country,
+                            'slug' => Str::slug($country, '-')
+                        ]);
+                        $country_ids[] = $newCountry->id;
+                    }
+                }
+
+                if(count($country_ids) > 0) {
+                    $movie->countries()->sync($country_ids);
+                }
+            }
+
+
+            // Трейлеры
             if(isset($res->videos["results"]) && count($res->videos["results"]) > 0) {
 
                 foreach($res->videos["results"] as $video){
@@ -316,6 +368,7 @@ class ParserController extends Controller
 
                 }
             }
+
 
 
 
