@@ -17,6 +17,10 @@ export default class Crud extends Sender {
         thisClass.submit('get', '/setTmdbSource/' + id_this_movie, data).then(response => {
             console.log(response);
 
+            if(response.message) {
+                $('#pars_search_res').after(`<div class="error_block" style="border: 2px solid red; font-size: 18px; padding: 4px;">Ошибка скачивания данных. Сообщите об ошибке! <br /><pre>${response.message}</pre></div>`);
+            }
+
             if(response.status == 'ok') {
 
                 //console.log(response);

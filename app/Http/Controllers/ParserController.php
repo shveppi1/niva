@@ -289,13 +289,17 @@ class ParserController extends Controller
                             $config = getConfigTmdb();
                         }
 
-                        $logo_url = $config->images['secure_base_url'] . 'original' . $network['logo_path'];
 
-                        $newNetwork = Network::create([
+                        $networkInput = [
                             'name' => $network['name'],
-                            'picture' => $logo_url,
                             'slug' => Str::slug($network['name'], '-')
-                        ]);
+                        ];
+                        if(isset($network['logo_path'])) {
+                            $logo_url = $config->images['secure_base_url'] . 'original' . $network['logo_path'];
+                            $networkInput['picture'] = $logo_url;
+                        }
+
+                        $newNetwork = Network::create($networkInput);
                         $network_ids[] = $newNetwork->id;
                     }
                 }
@@ -478,7 +482,7 @@ class ParserController extends Controller
                                 }
 
                                 // картинка
-                            if (!$serie->picture) {
+                            if (!$serie->picture && isset($episodeEN['still_path'])) {
                                 $config = getConfigTmdb();
                                 $still_url = $config->images['secure_base_url'] . 'original' . $episodeEN['still_path'];
                                 //$serie->picture = remote_upload_file($still_url, 'app/public/still/serial/series');
