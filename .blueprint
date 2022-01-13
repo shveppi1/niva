@@ -1,0 +1,42 @@
+created:
+    - database/factories/MovieFactory.php
+    - database/factories/PersonFactory.php
+    - database/factories/CategoryFactory.php
+    - database/factories/GenreFactory.php
+    - database/factories/CollectionFactory.php
+    - database/factories/SerieFactory.php
+    - database/factories/SeasonFactory.php
+    - database/migrations/2021_12_04_060622_create_movies_table.php
+    - database/migrations/2021_12_04_060623_create_people_table.php
+    - database/migrations/2021_12_04_060624_create_categories_table.php
+    - database/migrations/2021_12_04_060625_create_genres_table.php
+    - database/migrations/2021_12_04_060626_create_collections_table.php
+    - database/migrations/2021_12_04_060627_create_series_table.php
+    - database/migrations/2021_12_04_060628_create_seasons_table.php
+    - database/migrations/2021_12_04_060629_create_movie_person_table.php
+    - database/migrations/2021_12_04_060630_create_genre_movie_table.php
+    - database/migrations/2021_12_04_060631_create_collection_movie_table.php
+    - database/migrations/2021_12_04_060632_create_person_serie_table.php
+    - app/Models/Movie.php
+    - app/Models/Person.php
+    - app/Models/Category.php
+    - app/Models/Genre.php
+    - app/Models/Collection.php
+    - app/Models/Serie.php
+    - app/Models/Season.php
+    - database/seeders/MovieSeeder.php
+    - database/seeders/PersonSeeder.php
+    - database/seeders/CategorySeeder.php
+    - database/seeders/GenreSeeder.php
+    - database/seeders/CollectionSeeder.php
+    - database/seeders/SerieSeeder.php
+    - database/seeders/SeasonSeeder.php
+models:
+    User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string:100 nullable' }
+    Movie: { name: 'string:400', name_original: 'string nullable', alt_name: 'string nullable', slug: 'string unique', category_id: 'id foreign', description: 'text nullable', status_movie: 'string nullable comment:съемки', tagline: 'string nullable comment:слоган', year: 'integer unsigned nullable', chanel: 'string nullable', language: 'string nullable', duration: 'string nullable', source_url: 'text nullable', picture: 'string nullable', screen_url: 'string nullable', date_pub_rus: 'nullable timestamp', date_pub_world: 'nullable timestamp', published_at: 'nullable timestamp', status: 'enum:PUBLISHED,DISABLE,MODERATION default:''MODERATION''', author_id: 'id:user', relationships: { hasMany: Season, belongsToMany: 'Person, Genre, Collection' } }
+    Person: { name: 'string:400', name_original: 'string nullable', slug: 'string unique', birthday: 'string nullable', biography: 'text nullable', inst: 'string nullable', twitter: 'string nullable', picture: 'string nullable', status: 'enum:PUBLISHED,DISABLE,MODERATION default:''MODERATION''', author_id: 'id:user', relationships: { belongsToMany: 'Movie, Serie' } }
+    Category: { name: string, slug: 'string unique', description: 'text nullable', picture: 'string nullable', depth: 'integer unsigned nullable', lft: 'integer unsigned nullable', rgt: 'integer unsigned nullable', relationships: { hasMany: Movie } }
+    Genre: { name: string, slug: 'string unique', relationships: { belongsToMany: Movie } }
+    Collection: { name: string, slug: 'string unique', description: 'text nullable', picture: 'string nullable', status: 'enum:PUBLISHED,DISABLE,MODERATION default:''MODERATION''', relationships: { belongsToMany: Movie } }
+    Serie: { name: string, or_name: 'string nullable', number: 'integer unsigned', description: 'text nullable', realease_date: 'nullable timestamp', picture: 'string nullable', season_id: 'id foreign', relationships: { belongsToMany: Person } }
+    Season: { name: string, og_name: 'string nullable', description: 'text nullable', picture: 'string nullable', number: 'integer unsigned', movie_id: 'id foreign', relationships: { hasMany: Serie } }
