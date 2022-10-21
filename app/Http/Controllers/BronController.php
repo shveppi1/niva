@@ -12,6 +12,8 @@ class BronController extends Controller
 
     public function index() {
 
+        die();
+
         $updates = Bron::where('created_at', ">=", DB::raw('NOW() - INTERVAL 2 WEEK'))->where('action', 'update')->orderByDesc('id')->get();
         $edites = Bron::where('created_at', ">=", DB::raw('NOW() - INTERVAL 2 WEEK'))->where('action', 'edit')->orderByDesc('id')->get();
 
