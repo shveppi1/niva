@@ -1,2 +1,0 @@
-require('./models/admin/Crud');
-

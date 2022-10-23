@@ -11,7 +11,32 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .js('resources/js/admin.js', 'public/js')
-    .less('resources/less/app.less', 'public/css')
-    .less('resources/less/admin.less', 'public/css');
+// mix.js('resources/js/app.js', 'public/js')
+//     .js('resources/js/admin.js', 'public/js')
+//     .less('resources/less/app.less', 'public/css')
+//     .less('resources/less/admin.less', 'public/css');
+
+if (mix.inProduction()) {
+    mix
+        .setPublicPath('public/dist')
+        .js('resources/assets/js/app.js', 'js/all.min.js')
+        .sass('resources/assets/sass/app.scss', 'css/styles.min.css');
+} else {
+    mix
+        .setPublicPath('public/src')
+        .js('resources/assets/js/app.js', 'js/all.js')
+        .sass('resources/assets/sass/app.scss', 'css/styles.css')
+        .options({
+            processCssUrls: false
+        })
+        .sourceMaps()
+        .version();
+
+    mix.disableNotifications();
+
+    mix.webpackConfig({
+        devServer: {
+            disableHostCheck: true,
+        }
+    });
+}
