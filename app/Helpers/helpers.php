@@ -114,5 +114,22 @@ if (!function_exists('getConfigTmdb')) {
 
 }
 
+if (!function_exists('getCodePrivet')) {
+    /**
+     * @param string $uri
+     * @param string $method
+     * @param array $data
+     * @return stdClass
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    function getCodePrivet()
+    {
+
+        return 'voyunalunu';
+
+    }
+
+}
+
 
 ?>

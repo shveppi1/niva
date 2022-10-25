@@ -1,12 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+/** @var \Illuminate\Routing\Router $router */
 
 use App\Http\Controllers\StaticController;
-use App\Http\Controllers\ParserController;
-use App\Http\Controllers\SerialsController;
-use App\Http\Controllers\BronController;
-use App\Http\Controllers\TestController;
+use \App\Http\Controllers\HelpsController;
+use \App\Http\Controllers\GuardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,17 +17,17 @@ use App\Http\Controllers\TestController;
 */
 
 
-Route::get('/', [StaticController::class, 'index']);
-Route::get('/parse/{id}', [ParserController::class, 'index']);
-Route::get('/auto_parse', [ParserController::class, 'auto_parse']);
-Route::get('/tmdb', [ParserController::class, 'tmdb']);
-Route::get('/searchSerialTmdb/{name}', [ParserController::class, 'tmdb_searchSerial']);
-Route::get('/setTmdbSource/{id}', [ParserController::class, 'setTmdbSource']);
-Route::get('/tmdb_test', [ParserController::class, 'tmdb_test']);
-Route::get('/test', [TestController::class, 'index']);
+Route::get('/', [StaticController::class, 'index'])->name('main');
+
+$router->group(['prefix' => 'helps', 'middleware' => []], function () use ($router) {
+    $router
+        ->get('/', [HelpsController::class, 'helps'])->name('helps');
+    $router
+        ->get('/family', [HelpsController::class, 'helpsClub'])->middleware('isClubUser')->name('helps-club');
+    $router
+        ->get('/{id}', [HelpsController::class, 'helpsDetail'])->name('help-detail');
+});
 
 
-Route::get('/serials', [SerialsController::class, 'index']);
-Route::get('/serial/{slug}', [SerialsController::class, 'detail'])->name('serial-detail');
-
-Route::get('/get_update', [BronController::class, 'index']);
+$router->get('/check/{code}', [GuardController::class, 'checkHash'])->name('check_code');
+$router->get('/addcode/{code}', [GuardController::class, 'addHash'])->name('add_code');

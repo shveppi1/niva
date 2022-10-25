@@ -2,20 +2,20 @@
  /* jQuery Pre loader
   -----------------------------------------------*/
 $(window).load(function(){
-    $('.preloader').fadeOut(500); // set duration in brackets    
+    $('.preloader').fadeOut(500); // set duration in brackets
 });
 
 
 $(document).ready(function() {
 
-        
-    
+
+
         $(".gallery_click").on('click', function (e) {
             e.preventDefault();
-            
+
             let getfile = '/'+$(this).attr('data-getfile') + '.php';
-            
-            
+
+
             $.ajax({
                 type: 'POST',
                 url: getfile,
@@ -34,24 +34,24 @@ $(document).ready(function() {
                                                 loop: true
                                             });
                 },
-                
+
             });
         });
-    
-    
-    
+
+
+
         $(".click_map").on('click', function (e) {
             e.preventDefault();
-            
-            
+
+
             $('.click_map').removeClass('active');
-            
+
             $(this).addClass('active');
-            
-            
-            
+
+
+
             let mapsv = $(this).attr('data-map');
-            
+
             $.ajax({
                 type: 'POST',
                 contentType: 'application/json; charset=UTF-8',
@@ -59,14 +59,14 @@ $(document).ready(function() {
                 //dataType: 'html',
                 success: function (data) {
                     $('#sirskiy').html(data);
-                    
+
                 },
             });
         });
-    
-    
-    
-    
+
+
+
+
 
       $(".bg-gallery1").fancybox({
             loop: true,
@@ -139,16 +139,18 @@ $(document).ready(function() {
  /* Home Slideshow Vegas
   -----------------------------------------------*/
   $(function() {
-    $('.matrix').vegas({
-        slides: [
-            { src: '/images/1-1t.jpg' }/*,
+      if($('#home').length) {
+          $('.matrix').vegas({
+              slides: [
+                  {src: '/images/1-1t.jpg'}/*,
             { src: '/images/2-1.jpg' },
             { src: '/images/3-1.jpg' }*/
-        ],
-        timer: false,
-        transition: [ 'zoomIn', ],
-        animation: ['kenburns']
-    });
+              ],
+              timer: false,
+              transition: ['zoomIn',],
+              animation: ['kenburns']
+          });
+      }
   });
 
 
@@ -166,7 +168,7 @@ $(document).ready(function() {
           itemsMobile : [479,1],
       });
     });
-    
+
 
     /* Back to Top
     -----------------------------------------------*/
@@ -176,7 +178,7 @@ $(document).ready(function() {
             } else {
                 $('.go-top').fadeOut(200);
            }
-        });   
+        });
           // Animate the scroll to top
         $('.go-top').click(function(event) {
           event.preventDefault();

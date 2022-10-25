@@ -29,16 +29,18 @@
 
     <title>БожьяНива.рф Церковь христиан «Божья Нива»</title>
 
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
+
     @if (env('APP_ENV') === 'production')
         <link rel="stylesheet" href="{{env('STATIC_FILES', '')}}{{ mix('/css/styles.min.css', 'dist') }}">
     @else
         <link rel="stylesheet" href="{{env('STATIC_FILES', '')}}{{ mix('/css/styles.css', 'src') }}">
     @endif
     @yield('css')
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -103,7 +105,7 @@ if(isset($_REQUEST['res'])){
 
 
 
-
+@yield('modals')
 
 <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
 

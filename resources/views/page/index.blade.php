@@ -113,59 +113,66 @@
             <div class="row justify-content-center">
 
 
-                <div class="col-md-offset-1 col-md-10 col-sm-12">
+                <div class="contact_top">
 
-                    <div class="col-lg-offset-1 col-lg-10 section-title wow fadeInUp" data-wow-delay="0.4s">
-                        <h1 id="contactscroll">Контакты</h1>
-                        <p style="text-align: left;">Полное наименование: <br />Местная религиозная организация церковь христиан веры евангельской (пятидесятников) "Божья Нива" г. Липецка<br />Юридический/фактический адрес: <br />398902, Липецкая обл, Липецк г, Ударников ул, сооружение № 24А<br />Эл. почта: <a href="mailto:nivachurch48@gmail.com">nivachurch48@gmail.com</a><br />Телефон: +7 (920) 5056630/+7 (910) 2590816<br />ИНН/КПП: 4825044359/482601001<br />ОГРН: 1064800003180</p>
+                    <div class="col-md-offset-1 col-md-10 col-sm-12">
+
+                        <div class="col-lg-offset-1 col-lg-10 section-title wow fadeInUp" data-wow-delay="0.4s">
+                            <h1 id="contactscroll">Контакты</h1>
+                            <p style="text-align: left;">Полное наименование: <br />Местная религиозная организация церковь христиан веры евангельской (пятидесятников) "Божья Нива" г. Липецка<br />Юридический/фактический адрес: <br />398902, Липецкая обл, Липецк г, Ударников ул, сооружение № 24А<br />Эл. почта: <a href="mailto:nivachurch48@gmail.com">nivachurch48@gmail.com</a><br />Телефон: +7 (920) 5056630/+7 (910) 2590816<br />ИНН/КПП: 4825044359/482601001<br />ОГРН: 1064800003180</p>
+                        </div>
                     </div>
+
                 </div>
 
+                <div class="contact_bottom">
 
-                <div class="col-md-offset-1 col-md-10 col-sm-12">
+                    <div class="col-md-offset-1 col-md-10 col-sm-12">
 
-                    <div class="col-lg-offset-1 col-lg-10 section-title wow fadeInUp" data-wow-delay="0.4s">
-                        <h1>Наглядно где мы</h1>
-                        <p>Собрания проходят в трех разных местах, рекомендуем <br/>предварительно ознакомиться с нашим местоположением</p>
-                    </div>
-                </div>
-
-                <div style="clear: both;"></div>
-
-
-                <ul role="tablist" class="tab-contact">
-                    <li role="presentation">
-                        <a href="#sokol" data-map="sokol" class="click_map">Сокол</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#sirskiy" data-map="sirskiy" class="click_map active">Сырский</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#gryazi" data-map="gryazi" class="click_map">Грязи</a>
-                    </li>
-                </ul>
-
-                <div class="tab-content">
-
-
-
-
-
-                    <div role="tabpanel" class="tab-pane active" id="sirskiy">
-
-
-                        <p>Адрес: г. Липецк, пр. Ударников 24А (Сырский рудник, остановка "школа 23")</p>
-
-                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7455a0aababc5d6a0f31b6eb7c47d54e2b8540a8533549af62c3438c8f78c16b&amp;source=constructor" width="100%" height="350" frameborder="0"></iframe>
-
-                        <div style="clear: both;"></div>
-
-
+                        <div class="col-lg-offset-1 col-lg-10 section-title wow fadeInUp" data-wow-delay="0.4s">
+                            <h1>Наглядно где мы</h1>
+                            <p>Собрания проходят в трех разных местах, рекомендуем <br/>предварительно ознакомиться с нашим местоположением</p>
+                        </div>
                     </div>
 
+                    <div style="clear: both;"></div>
+
+
+                    <ul role="tablist" class="tab-contact">
+                        <li role="presentation">
+                            <a href="#sokol" data-map="sokol" class="click_map">Сокол</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#sirskiy" data-map="sirskiy" class="click_map active">Сырский</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#gryazi" data-map="gryazi" class="click_map">Грязи</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
 
 
 
+
+
+                        <div role="tabpanel" class="tab-pane active" id="sirskiy">
+
+
+                            <p>Адрес: г. Липецк, пр. Ударников 24А (Сырский рудник, остановка "школа 23")</p>
+
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7455a0aababc5d6a0f31b6eb7c47d54e2b8540a8533549af62c3438c8f78c16b&amp;source=constructor" width="100%" height="350" frameborder="0"></iframe>
+
+                            <div style="clear: both;"></div>
+
+
+                        </div>
+
+
+
+
+
+                    </div>
 
                 </div>
 
