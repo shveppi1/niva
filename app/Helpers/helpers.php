@@ -1,29 +1,5 @@
 <?php
 
-if (!function_exists('remote_upload_file')) {
-    function remote_upload_file($url, $path = 'app/public/poster/serial')
-    {
-
-        try {
-            $contents = file_get_contents($url);
-        } catch (\Exception $e) {
-            return '';
-        }
-
-        $name1 = new \SplFileInfo($url);
-        $name = \Illuminate\Support\Carbon::now()->format('dmy-his') . $name1->getFilename();
-
-        $disk = Storage::build([
-            'driver' => 'local',
-            'root' => storage_path($path),
-        ]);
-
-        $disk->put($name, $contents);
-
-        return $name;
-    }
-}
-
 if (!function_exists('remove_emoji')) {
     function remove_emoji($text)
     {
@@ -42,77 +18,6 @@ if (!function_exists('add_array_to_json')) {
 
 
 
-if (!function_exists('apiCurlTmdb')) {
-    /**
-     * @param string $uri
-     * @param string $method
-     * @param array $data
-     * @return stdClass
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     */
-    function apiCurlTmdb(string $uri, string $method = 'get', array $data = []): stdClass
-    {
-        $urlTMDB = 'https://api.themoviedb.org/3/';
-
-        $query['api_key'] = 'e6aa6ace9ce2ae7bb8697213f9e5ba2e';
-
-        if(count($data) > 0) {
-            $query = array_merge($query, $data);
-        }
-
-        $uri = isset($uri[0]) && $uri[0] == '/' ? substr($uri, 1) : $uri;
-
-
-        $client = new \GuzzleHttp\Client();
-        $options = [
-            'headers' => [
-                //'Authorization' => "Bearer " . config('app.apiKey'),
-                'Authorization' => "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlNmFhNmFjZTljZTJhZTdiYjg2OTcyMTNmOWU1YmEyZSIsInN1YiI6IjVmODg4YTM2ZTMzZjgzMDAzYWZlMzRlMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7I3fWzDoZ_OjPCP79dJQx0MJtu6FlB9Kkd5T3q5TfCw",
-                'Accept' => 'application/json',
-            ],
-            'verify' => env('APP_ENV') === 'production',
-            'http_errors' => false,
-        ];
-        if (strtoupper($method) === 'GET') {
-            //$options['query'] = $data;
-        } else {
-            $options['form_params'] = $data;
-        }
-
-        try {
-            $response = $client->request($method, $urlTMDB . $uri . '?' . http_build_query($query), $options);
-            $result = json_decode($response->getBody()->getContents(), true);
-        } catch (Exception $exception) {
-            $result = [];
-        }
-
-        return (object)$result;
-    }
-}
-
-
-if (!function_exists('getConfigTmdb')) {
-    /**
-     * @param string $uri
-     * @param string $method
-     * @param array $data
-     * @return stdClass
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     */
-    function getConfigTmdb()
-    {
-
-        return Cache::remember('configTmdb', \Illuminate\Support\Carbon::now()->addHours(3), function () {
-
-
-            $response  = apiCurlTmdb('configuration');
-
-            return $response;
-        });
-
-    }
-
-}
 
 if (!function_exists('getCodePrivet')) {
     /**
