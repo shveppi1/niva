@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\UserRequest;
+use App\Models\User;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
@@ -62,16 +63,21 @@ class UserCrudController extends CrudController
     {
         CRUD::setValidation(UserRequest::class);
 
-        CRUD::field('name');
-        CRUD::field('email');
+        CRUD::field('name')->label('Имя');
+        CRUD::field('email')->label('Эмейл');
         $this->crud->addField([
             'type' => 'select2_multiple',
+            'label' => 'Группа',
             'name' => 'groups', // the relationship name in your Model
             'entity' => 'groups', // the relationship name in your Model
             'attribute' => 'title', // attribute on Article that is shown to admin
             'pivot' => true, // on create&update, do you need to add/delete pivot table entries?
         ]);
         CRUD::field('password');
+
+        User::creating(function($entry) {
+            $entry->password = \Hash::make($entry->password);
+        });
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
@@ -88,6 +94,19 @@ class UserCrudController extends CrudController
      */
     protected function setupUpdateOperation()
     {
-        $this->setupCreateOperation();
+        //$this->setupCreateOperation();
+
+        CRUD::field('name')->label('Имя');
+        CRUD::field('email')->label('Эмейл');
+        $this->crud->addField([
+            'type' => 'select2_multiple',
+            'label' => 'Группа',
+            'name' => 'groups', // the relationship name in your Model
+            'entity' => 'groups', // the relationship name in your Model
+            'attribute' => 'title', // attribute on Article that is shown to admin
+            'pivot' => true, // on create&update, do you need to add/delete pivot table entries?
+        ]);
+        //CRUD::field('password');
+
     }
 }
