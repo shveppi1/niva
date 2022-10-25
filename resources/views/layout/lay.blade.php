@@ -110,6 +110,7 @@ if(isset($_REQUEST['res'])){
 <a href="#" class="go-top"><i class="fa fa-angle-up"></i></a>
 
 <script src="/assets/js/jquery.js"></script>
+<script src="/assets/js/jquery.cookie.js"></script>
 <script src="/assets/js/bootstrap.min.js"></script>
 <script src="/assets/js/vegas.min.js"></script>
 <script src="/assets/js/modernizr.custom.js"></script>

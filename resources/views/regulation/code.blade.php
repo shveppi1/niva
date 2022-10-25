@@ -78,21 +78,30 @@
             <div class="pop_stage">
                 <div class="pop_slide">
                     <div class="pop_content">
+                        @if(!auth()->user())
                         <h2>Авторизоваться на сайте</h2>
-                        <form class="nivaForm" action="{{route('login')}}">
+                        <form class="nivaForm" method="POST" action="{{ route('login') }}">
+                            @csrf
                             <input class="form-control" name="email" type="text" placeholder="Эмейл">
                             <input class="form-control" name="password" type="password" placeholder="Пароль">
                             <div class="d-flex">
                                 <input type="submit" class="btn_niva btn_black" value="Отправить">
-                                <a href="/" class="btn_niva btn_empty">Регистрация</a>
+                                <a href="{{route('register')}}" class="btn_niva btn_empty">Регистрация</a>
                             </div>
                         </form>
+                        @else
+                            <h2>Вы авторизованы на сайте</h2>
+                            <p>Вас еще не добавили в группу с доступом к данному разделу.</p>
+                            <p>Обратитесь к Данилу, либо введите код если есть</p>
+                        @endif
 
-                        <form action="">
+                        <form class="nivaForm" id="code_form" action="">
+                            @csrf
                             <br />
                             <p>Открыть по коду</p>
                             <input class="form-control" name="code" type="text" placeholder="xxxxxx">
                             <input type="submit" class="btn_niva btn_red" value="Отправить код">
+                            <a href="{{route('helps')}}" class="btn_niva btn_empty">Назад</a>
                         </form>
                     </div>
                 </div>

@@ -125,7 +125,7 @@ if (!function_exists('getCodePrivet')) {
     function getCodePrivet()
     {
 
-        return 'voyunalunu';
+        return md5('voyunalunu');
 
     }
 

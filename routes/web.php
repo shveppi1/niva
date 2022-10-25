@@ -23,11 +23,25 @@ $router->group(['prefix' => 'helps', 'middleware' => []], function () use ($rout
     $router
         ->get('/', [HelpsController::class, 'helps'])->name('helps');
     $router
-        ->get('/family', [HelpsController::class, 'helpsClub'])->middleware('isClubUser')->name('helps-club');
+        ->get('/family', [HelpsController::class, 'helpsClub'])->name('helps-club');
     $router
         ->get('/{id}', [HelpsController::class, 'helpsDetail'])->name('help-detail');
 });
 
 
-$router->get('/check/{code}', [GuardController::class, 'checkHash'])->name('check_code');
-$router->get('/addcode/{code}', [GuardController::class, 'addHash'])->name('add_code');
+$router->post('/check-hash', [GuardController::class, 'checkHash'])->name('check_hash');
+$router->post('/addcode', [GuardController::class, 'addHash'])->name('add_code');
+$router->post('/check-code', [GuardController::class, 'checkCode'])->name('check_code');
+
+/*
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+*/
+
+
+require __DIR__.'/auth.php';

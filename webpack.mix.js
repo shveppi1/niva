@@ -20,14 +20,27 @@ if (mix.inProduction()) {
     mix
         .setPublicPath('public/dist')
         .js('resources/assets/js/app.js', 'js/all.min.js')
-        .sass('resources/assets/sass/app.scss', 'css/styles.min.css');
+        .sass('resources/assets/sass/app.scss', 'css/styles.min.css')
+        .options({
+            processCssUrls: false,
+            postCss: [
+                require('tailwindcss'),
+                require('autoprefixer'),
+            ]
+        })
+        .sourceMaps()
+        .version();
 } else {
     mix
         .setPublicPath('public/src')
         .js('resources/assets/js/app.js', 'js/all.js')
         .sass('resources/assets/sass/app.scss', 'css/styles.css')
         .options({
-            processCssUrls: false
+            processCssUrls: false,
+            postCss: [
+                require('tailwindcss'),
+                require('autoprefixer'),
+            ]
         })
         .sourceMaps()
         .version();
@@ -40,3 +53,11 @@ if (mix.inProduction()) {
         }
     });
 }
+
+/*
+mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
+    require('tailwindcss'),
+    require('autoprefixer'),
+]);
+
+ */
