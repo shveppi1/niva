@@ -6,7 +6,7 @@ use App\Models\Regulation;
 
 class HelpsController extends Controller
 {
-    private $code = 'voyunalunu';
+    private $code = 'lip48';
     private $pref_code = '1xc202hh';
 
     public function helps() {

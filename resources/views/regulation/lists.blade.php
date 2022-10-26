@@ -3,32 +3,35 @@
 
 @section('page_content')
 
-    @if(url()->current() != route('helps-club'))
-    <div class="d-flex align-content-end">
-        <a  href="{{route('helps-club')}}" class="btn btn_black">Перейти к информации для членов клуба</a>
-    </div>
-
-    <br><br>
-    @else
+    <div class="regular_list">
+        @if(url()->current() != route('helps-club'))
         <div class="d-flex align-content-end">
-            <a  href="{{route('helps')}}" class="btn btn_black">Перейти к информации для всех</a>
+            <a  href="{{route('helps-club')}}" class="btn btn_black">Перейти к информации для членов клуба</a>
         </div>
 
         <br><br>
-    @endif
+        @else
+            <div class="d-flex align-content-end">
+                <a  href="{{route('helps')}}" class="btn btn_black">Перейти к информации для всех</a>
+            </div>
 
-    @foreach($regulations as $regular)
+            <br><br>
+        @endif
 
-        <a class="regular" href="{{ route('help-detail', $regular->id) }}">
-            <h3>{{$regular->name}}</h3>
-            <p class="regular__short">
-                {{$regular->short}}
-            </p>
+        @foreach($regulations as $regular)
 
-            <span class="link_detail">Прочитать полностью</span>
-        </a>
+            <a class="regular" href="{{ route('help-detail', $regular->id) }}">
+                <h3>{{$regular->name}}</h3>
+                <p class="regular__short">
+                    {{$regular->short}}
+                </p>
 
-    @endforeach
+                <span class="link_detail">Прочитать полностью</span>
+            </a>
+
+        @endforeach
+
+    </div>
 
 
 @endsection

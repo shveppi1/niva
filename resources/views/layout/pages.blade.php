@@ -16,3 +16,5 @@
 
 
 @endsection
+
+@yield('bottom_content')

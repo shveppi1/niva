@@ -1,3 +1,7 @@
+img {
+    max-width: 100%;
+}
+
 .btn_black {
     background-color: #23394a;
     color: #ffffff;
@@ -64,7 +68,11 @@
 
     .page_wrap {
         background: #fff;
-        padding: 25px;
+        padding: 6px;
+    }
+
+    .regular_list {
+        padding: 10px;
     }
 
     .about-thumb {
@@ -73,6 +81,52 @@
         h1 {
             font-weight: 500;
         }
+    }
+
+    .about-thumb.regular_detail {
+        padding: 5px 12px;
+        background: #f9fbfd;
+
+        h1 {
+            letter-spacing: 2px;
+            line-height: 1.1;
+        }
+    }
+
+    .decription.detail {
+        font-family: Source Sans Pro,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+        p {
+            color: #304352;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+}
+
+.back_fixed {
+    display: none;
+    position: fixed;
+    max-height: 45px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #eaeaea;
+    height: 38px;
+    text-align: center;
+    padding: 5px;
+    font-size: 18px;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #215a70;
     }
 }
 
@@ -104,6 +158,10 @@
 
 
 }
+
+
+
+
 
 .nivaForm {
     .form-control {
@@ -199,4 +257,11 @@
     position: absolute;
     right: 0;
     top: 0;
+}
+
+
+@media (max-width: 460px) {
+        .back_fixed {
+            display: flex;
+        }
 }

@@ -9,7 +9,7 @@ use Illuminate\Support\Carbon;
 class GuardController extends Controller
 {
 
-    private $code = 'voyunalunu';
+    private $code = 'lip48';
     private $pref_code = '1xc202hh';
 
     public function addHash($code) {
