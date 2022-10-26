@@ -26,7 +26,15 @@
                 <div class="col-md-9 col-sm-8 wow fadeInUp" id="aboutscroll" data-wow-delay="0.2s">
                     <div class="about-thumb">
                         <h1 style="letter-spacing: 6px;" >Добро пожаловать</h1>
-                        <p style="color: #c1510a;">Божья Нива &ndash; это церковь евангельских христиан (пятидесятников). <br />Мы являемся частью одной из трех ветвей традиционного христианства &ndash; Протестантизма и входим в объединенный союз <a href="https://www.cef.ru/" target="_blank">РОСХВЕ</a>. <br />Приглашаем Вас посетить наши Богослужения, которые проходят каждое Воскресенье в 11:00 (как нас найти смотрите ниже)! Также, вы можете познакомиться с нашей церковью ближе в наших социальных сетях (<a target="_blank" href="https://vk.com/nivachurch">ВКонтакте</a>) и на <a href="https://www.youtube.com/channel/UCx1JJxB0o__PD85tmXg-7Vw" target="_blank" >Youtube-канале</a>.</p>
+                        <p style="color: #c1510a;">Божья Нива &ndash; это церковь евангельских христиан (пятидесятников). <br />
+                            Мы являемся частью одной из трех ветвей традиционного христианства &ndash; Протестантизма
+                            и входим в объединенный союз <a href="https://www.cef.ru/" target="_blank">РОСХВЕ</a>.
+                            <br />Приглашаем Вас посетить наши Богослужения, которые проходят каждое Воскресенье в 11:00
+                            (как нас найти смотрите ниже)!<br />
+                            Также, вы можете познакомиться с нашей церковью ближе в наших социальных сетях
+                            (<a target="_blank" href="https://vk.com/nivachurch">ВКонтакте</a>) и на
+                            <a href="https://www.youtube.com/channel/UCx1JJxB0o__PD85tmXg-7Vw" target="_blank" >Youtube-канале</a>.
+                        </p>
                     </div>
                 </div>
 
