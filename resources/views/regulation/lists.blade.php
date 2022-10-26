@@ -6,7 +6,7 @@
     <div class="regular_list">
         @if(url()->current() != route('helps-club'))
         <div class="d-flex align-content-end">
-            <a  href="{{route('helps-club')}}" class="btn btn_black">Перейти к информации для членов клуба</a>
+            <a  href="{{route('helps-club')}}" class="btn btn_black">Перейти к информации для членов церкви</a>
         </div>
 
         <br><br>
