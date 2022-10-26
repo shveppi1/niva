@@ -1237,11 +1237,9 @@ img {
   line-height: 1.1;
   text-align: center;
 }
-#page .decription.detail {
-  font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-}
-#page .decription.detail p {
+#page .decription.detail p, #page .decription.detail span {
   color: #304352;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 #page .decription.detail img {
   max-width: 100%;
@@ -1278,6 +1276,7 @@ img {
   display: block;
   text-decoration: none !important;
   border: 1px solid #eaeaea;
+  margin-bottom: 17px;
 }
 .regular h3 {
   margin-top: 0px;
@@ -1385,5 +1384,8 @@ img {
 @media (max-width: 460px) {
   .back_fixed {
     display: flex;
+  }
+  #page .decription.detail p, #page .decription.detail span {
+    font: 400 20px/34px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", Arial, sans-serif;
   }
 }

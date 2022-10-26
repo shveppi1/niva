@@ -95,9 +95,10 @@ img {
     }
 
     .decription.detail {
-        font-family: Source Sans Pro,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-        p {
+        //font-family: Source Sans Pro,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+        p, span {
             color: #304352;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
         }
 
         img {
@@ -139,6 +140,7 @@ img {
     display: block;
     text-decoration: none!important;
     border: 1px solid #eaeaea;
+    margin-bottom: 17px;
 
 
     h3 {
@@ -267,4 +269,12 @@ img {
         .back_fixed {
             display: flex;
         }
+
+    #page {
+        .decription.detail {
+            p, span {
+                font: 400 20px/34px -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans',Arial,sans-serif
+            }
+        }
+    }
 }
