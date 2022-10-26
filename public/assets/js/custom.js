@@ -10,64 +10,6 @@ $(document).ready(function() {
 
 
 
-        $(".gallery_click").on('click', function (e) {
-            e.preventDefault();
-
-            let getfile = '/'+$(this).attr('data-getfile') + '.php';
-
-
-            $.ajax({
-                type: 'POST',
-                url: getfile,
-                dataType: 'json',
-                success: function (data) {
-                    $.fancybox.open(data,  {
-                                                buttons: [
-                                                    "fullScreen",
-													"thumbs",
-                                                    "close"
-                                                ],
-                                                arrows: true,
-                                                infobar: true,
-                                                smallBtn: "auto",
-                                                toolbar: "auto",
-                                                loop: true
-                                            });
-                },
-
-            });
-        });
-
-
-
-        $(".click_map").on('click', function (e) {
-            e.preventDefault();
-
-
-            $('.click_map').removeClass('active');
-
-            $(this).addClass('active');
-
-
-
-            let mapsv = $(this).attr('data-map');
-
-            $.ajax({
-                type: 'POST',
-                contentType: 'application/json; charset=UTF-8',
-                url: '/map.php?map='+mapsv,
-                //dataType: 'html',
-                success: function (data) {
-                    $('#sirskiy').html(data);
-
-                },
-            });
-        });
-
-
-
-
-
       $(".bg-gallery1").fancybox({
             loop: true,
             keyboard: true,

@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     @if (env('APP_ENV') === 'production')
         <link rel="stylesheet" href="{{env('STATIC_FILES', '')}}{{ mix('/css/styles.min.css', 'dist') }}">

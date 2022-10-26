@@ -5,6 +5,7 @@
 use App\Http\Controllers\StaticController;
 use \App\Http\Controllers\HelpsController;
 use \App\Http\Controllers\GuardController;
+use \App\Http\Controllers\ApsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,6 +33,8 @@ $router->group(['prefix' => 'helps', 'middleware' => []], function () use ($rout
 $router->post('/check-hash', [GuardController::class, 'checkHash'])->name('check_hash');
 $router->post('/addcode', [GuardController::class, 'addHash'])->name('add_code');
 $router->post('/check-code', [GuardController::class, 'checkCode'])->name('check_code');
+$router->post('/get-map', [ApsController::class, 'getMap'])->name('getmap');
+$router->post('/get-gallery', [ApsController::class, 'getGallery'])->name('getgallery');
 
 /*
 Route::get('/', function () {
