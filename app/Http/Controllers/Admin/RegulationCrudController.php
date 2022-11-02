@@ -68,7 +68,7 @@ class RegulationCrudController extends CrudController
         $a = '';
         if($this->crud->getCurrentEntryId()) {
 
-            $a = '<a target="_blank" href="/helps/'.$this->crud->getEntry($this->crud->getCurrentEntryId())["id"].'" style="margin-right: 20px; color: #fff; padding: 5px 10px; background: #42ba96">Посмотреть </a>';
+            $a = '<a target="_blank" href="/helps/'.$this->crud->getEntry($this->crud->getCurrentEntryId())["id"].'" style="margin-right: 20px; color: #fff; padding: 5px 10px; background: #42ba96">Посмотреть на сайте</a>';
 
         }
 
