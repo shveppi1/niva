@@ -11,7 +11,12 @@ class HelpsController extends Controller
 
     public function helps() {
 
-        $regulations = Regulation::NotClubs()->limit(10)->get();
+        $regulations = Regulation::NotClubs()
+            ->Active()
+            ->orderBy('sort', 'asc')
+            ->orderBy('created_at', 'desc')
+            ->limit(10)
+            ->get();
 
         return view('regulation.lists', compact('regulations'));
     }
@@ -40,7 +45,12 @@ class HelpsController extends Controller
 
 
         if($showPage) {
-            $regulations = Regulation::Clubs()->limit(10)->get();
+            $regulations = Regulation::Clubs()
+                ->Active()
+                ->orderBy('sort', 'asc')
+                ->orderBy('created_at', 'desc')
+                ->limit(10)
+                ->get();
             return view('regulation.lists', compact('regulations'));
         } else {
             return view('regulation.code');
@@ -51,7 +61,7 @@ class HelpsController extends Controller
 
     public function helpsDetail($id) {
 
-        $regulation = Regulation::findOrFail($id);
+        $regulation = Regulation::Active()->findOrFail($id);
 
         if($regulation->private == 1){
 

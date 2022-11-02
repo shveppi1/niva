@@ -67,6 +67,11 @@ class Regulation extends Model
         return $query->where('private', 1);
     }
 
+    public function scopeActive($query)
+    {
+        return $query->where('active', 1);
+    }
+
 
     /*
     |--------------------------------------------------------------------------

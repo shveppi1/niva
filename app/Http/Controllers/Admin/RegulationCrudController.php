@@ -64,6 +64,23 @@ class RegulationCrudController extends CrudController
     {
         CRUD::setValidation(RegulationRequest::class);
 
+
+        $a = '';
+        if($this->crud->getCurrentEntryId()) {
+
+            $a = '<a target="_blank" href="/helps/'.$this->crud->getEntry($this->crud->getCurrentEntryId())["id"].'" style="margin-right: 20px; color: #fff; padding: 5px 10px; background: #42ba96">Посмотреть </a>';
+
+        }
+
+
+        $this->crud->addField([   // CustomHTML
+            'name'  => 'separator',
+            'type'  => 'custom_html',
+            'value' => "<div class='header_button_creat'>
+                {$a}
+                </div>"
+        ]);
+
         CRUD::field('name')->label('Наименование статьи');
         CRUD::addField([
             'label' => 'Описание',
@@ -72,7 +89,9 @@ class RegulationCrudController extends CrudController
             'options' => $this->textEditorOptions()
         ]);
         CRUD::field('short')->label('Краткое описание');
+        CRUD::field('sort')->label('Сортировка')->hint('По умолчанию у всех 100, если надо отправить в конец пишем больше цифру (500...)');
         CRUD::field('private')->label('Только для членства');
+        CRUD::field('active')->label('Включить статью');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

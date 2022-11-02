@@ -127,7 +127,6 @@ img {
 
 .back_fixed {
     display: none;
-    position: fixed;
     max-height: 50px;
     width: 100%;
     bottom: 0;
@@ -284,7 +283,8 @@ img {
 
 @media (max-width: 460px) {
         .back_fixed {
-            display: flex;
+            display: flex!important;
+            position: fixed;
         }
 
     #page {

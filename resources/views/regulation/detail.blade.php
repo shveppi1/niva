@@ -25,7 +25,7 @@
 
 @section('bottom_content')
 
-    <div class="back_fixed">
+    <div class="back_fixed" style="display: none">
         @if($regulation->private == 1)
             <a href="{{route('helps-club')}}" class="">Назад к списку</a>
         @else
