@@ -89,7 +89,7 @@ class RegulationCrudController extends CrudController
             'options' => $this->textEditorOptions()
         ]);
         CRUD::field('short')->label('Краткое описание');
-        CRUD::field('sort')->label('Сортировка')->hint('По умолчанию у всех 100, если надо отправить в конец пишем больше цифру (500...)');
+        CRUD::field('sort')->default('100')->label('Сортировка')->hint('По умолчанию у всех 100, если надо отправить в конец пишем больше цифру (500...)');
         CRUD::field('private')->label('Только для членства');
         CRUD::field('active')->label('Включить статью');
 

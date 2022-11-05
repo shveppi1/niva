@@ -1153,62 +1153,6 @@ li.donate a {
   }
 
 }
-img {
-  max-width: 100%;
-}
-
-.btn_black {
-  background-color: #23394a;
-  color: #ffffff;
-  border: 1px solid #23394a;
-}
-
-.btn_black:hover {
-  background-color: #e44c65;
-  border: 1px solid #e44c65;
-  color: #fff;
-}
-
-.btn_red {
-  background: #e44c65;
-  border: 1px solid #e44c65;
-  color: #fff;
-}
-
-.btn_red:hover {
-  background-color: #23394a;
-  border: 1px solid #23394a;
-}
-
-.btn_niva {
-  outline: none;
-  padding: 7px 16px;
-  font-size: 18px;
-  font-weight: normal;
-}
-
-#contact {
-  background: #e7e7e7;
-  color: black;
-}
-#contact p {
-  color: black;
-}
-#contact .contact_top, #contact .contact_bottom {
-  background: #fff;
-  padding: 10px;
-}
-#contact ul.tab-contact li a {
-  color: #000;
-  border: 2px solid #FF8B00;
-}
-#contact ul.tab-contact li a.active {
-  box-shadow: 0 0 8px #cf760d;
-}
-#contact ul.tab-contact li a:hover {
-  color: #FF8B00;
-}
-
 #page {
   padding-top: 70px;
   background: #e7e7e7;
@@ -1236,6 +1180,10 @@ img {
   letter-spacing: 2px;
   line-height: 1.1;
   text-align: center;
+}
+#page .about-thumb.regular_detail h5, #page .about-thumb.regular_detail h3, #page .about-thumb.regular_detail h4 {
+  font-size: 22px;
+  letter-spacing: 2px;
 }
 #page .decription.detail {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1308,6 +1256,74 @@ img {
   letter-spacing: 1px;
   line-height: 34px;
   text-decoration: none;
+}
+
+@media (max-width: 460px) {
+  .back_fixed {
+    display: flex !important;
+    position: fixed;
+  }
+  #page .decription.detail p {
+    font-size: 20px;
+  }
+  #page .decription.detail h5, #page .decription.detail h3, #page .decription.detail h4 {
+    font-size: 20px;
+  }
+}
+img {
+  max-width: 100%;
+}
+
+.btn_black {
+  background-color: #23394a;
+  color: #ffffff;
+  border: 1px solid #23394a;
+}
+
+.btn_black:hover {
+  background-color: #e44c65;
+  border: 1px solid #e44c65;
+  color: #fff;
+}
+
+.btn_red {
+  background: #e44c65;
+  border: 1px solid #e44c65;
+  color: #fff;
+}
+
+.btn_red:hover {
+  background-color: #23394a;
+  border: 1px solid #23394a;
+}
+
+.btn_niva {
+  outline: none;
+  padding: 7px 16px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+#contact {
+  background: #e7e7e7;
+  color: black;
+}
+#contact p {
+  color: black;
+}
+#contact .contact_top, #contact .contact_bottom {
+  background: #fff;
+  padding: 10px;
+}
+#contact ul.tab-contact li a {
+  color: #000;
+  border: 2px solid #FF8B00;
+}
+#contact ul.tab-contact li a.active {
+  box-shadow: 0 0 8px #cf760d;
+}
+#contact ul.tab-contact li a:hover {
+  color: #FF8B00;
 }
 
 .nivaForm .form-control {
@@ -1394,14 +1410,4 @@ img {
   position: absolute;
   right: 0;
   top: 0;
-}
-
-@media (max-width: 460px) {
-  .back_fixed {
-    display: flex !important;
-    position: fixed;
-  }
-  #page .decription.detail p {
-    font-size: 20px;
-  }
 }
