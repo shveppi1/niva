@@ -1177,13 +1177,9 @@ li.donate a {
   background: #fff;
 }
 #page .about-thumb.regular_detail h1 {
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   line-height: 1.1;
   text-align: center;
-}
-#page .about-thumb.regular_detail h5, #page .about-thumb.regular_detail h3, #page .about-thumb.regular_detail h4 {
-  font-size: 22px;
-  letter-spacing: 2px;
 }
 #page .decription.detail {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1203,10 +1199,23 @@ li.donate a {
 #page .decription.detail p {
   color: #000 !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
+  margin-bottom: 0px;
 }
 #page .decription.detail img {
   max-width: 100%;
+}
+#page .decription.detail h4 {
+  font-size: 1.5rem;
+}
+#page .decription.detail h3 {
+  font-size: 1.7rem;
+}
+#page .decription.detail h5, #page .decription.detail h3, #page .decription.detail h4 {
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0px;
 }
 
 .back_fixed {
@@ -1264,7 +1273,7 @@ li.donate a {
     position: fixed;
   }
   #page .decription.detail p {
-    font-size: 20px;
+    font-size: 18px;
   }
   #page .decription.detail h5, #page .decription.detail h3, #page .decription.detail h4 {
     font-size: 20px;
