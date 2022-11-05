@@ -1220,15 +1220,15 @@ li.donate a {
 
 .back_fixed {
   display: none;
-  max-height: 50px;
+  max-height: 60px;
   width: 100%;
   bottom: 0;
   left: 0;
   border-top: 1px solid #eaeaea;
-  height: 50px;
+  height: 60px;
   text-align: center;
   padding: 0px;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 400;
   background: #fff;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
@@ -1274,6 +1274,7 @@ li.donate a {
   }
   #page .decription.detail p {
     font-size: 18px;
+    font-weight: 400;
   }
   #page .decription.detail h5, #page .decription.detail h3, #page .decription.detail h4 {
     font-size: 20px;
