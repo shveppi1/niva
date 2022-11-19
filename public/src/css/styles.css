@@ -1243,6 +1243,11 @@ li.donate a {
 @media (max-width: 460px) {
   #page .decription.detail p {
     line-height: 28px;
+    font-size: 20px;
+  }
+  #page .decription.detail span {
+    font-size: 20px;
+    line-height: 28px;
   }
 }
 #page .decription.detail img {
