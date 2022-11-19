@@ -25,11 +25,38 @@
         padding: 5px 12px;
         background: #fff;
 
-        h1 {
-            letter-spacing: 1px;
-            line-height: 1.1;
+        h1.title_txt {
             text-align: center;
+            font-family: "Alice",serif;
+            text-transform: none;
+            color: #223f3f;
+            font-size: 48px;
+            line-height: 48px;
+            font-weight: 400;
+            letter-spacing: -.022em;
         }
+
+        @media (max-width: 991px) {
+            h1.title_txt {
+                font-size: 52px!important;
+                line-height: 52px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            h1.title_txt {
+                font-size: 38px!important;
+                line-height: 38px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            h1.title_txt {
+                font-size: 36px!important;
+                line-height: 36px;
+            }
+        }
+
 
 
     }
@@ -51,29 +78,61 @@
         }
 
         p {
-            color: #000!important;
+            //color: #000!important;
             font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
-            font-size: 18px;
+            //font-size: 18px;
             margin-bottom: 0px;
+            font-family: Inter,sans-serif;
+            font-size: 90%;
+            color: #414e5c;
+            line-height: 31px;
+        }
+
+        @media (max-width: 460px) {
+            p {
+                line-height: 28px;
+            }
         }
 
         img {
             max-width: 100%;
         }
 
-        h4 {
-            font-size: 1.5rem;
+        h1, h1 span, h5,h3,h4, h2, h3 b span, h3 span, h3 b, h2 b span, h2 span, h2 b, h4 b span, h4 span, h4 b {
+            text-align: center;
+            font-family: "Alice",serif;
+            text-transform: none;
+            color: #414e5c;
+            font-size: 35px!important;
+            line-height: 35px;
+            font-weight: 400;
+            letter-spacing: -.022em;
         }
 
-        h3 {
-            font-size: 1.7rem;
+
+        @media (max-width: 991px) {
+            h1, h1 span, h5,h3,h4, h2, h3 b span, h3 span, h3 b, h2 b span, h2 span, h2 b, h4 b span, h4 span, h4 b {
+                font-size: 32px!important;
+                line-height: 32px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            h1, h1 span, h5,h3,h4, h2, h3 b span, h3 span, h3 b, h2 b span, h2 span, h2 b, h4 b span, h4 span, h4 b {
+                font-size: 28px!important;
+                line-height: 28px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            h1, h1 span, h5,h3,h4, h2, h3 b span, h3 span, h3 b, h2 b span, h2 span, h2 b, h4 b span, h4 span, h4 b {
+                font-size: 30px!important;
+                line-height: 30px;
+            }
         }
 
         h5,h3,h4 {
-            font-weight: 500;
-            line-height: 1.2;
             margin-bottom: 0.5rem;
-            letter-spacing: 0px;
         }
     }
 
@@ -148,14 +207,10 @@
 
     #page {
         .decription.detail {
-            p {
+            /*p {
                 font-size: 18px;
                 font-weight: 400;
-            }
-
-            h5,h3,h4 {
-                font-size: 20px;
-            }
+            }*/
         }
     }
 }

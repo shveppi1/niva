@@ -4,7 +4,7 @@
 @section('page_content')
 
             <div class="about-thumb regular_detail">
-                <h1>{{$regulation->name}}</h1>
+                <h1 class="title_txt">{{$regulation->name}}</h1>
 
                 <div class="decription detail">
                     {!! $regulation->description !!}

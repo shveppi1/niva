@@ -1153,6 +1153,19 @@ li.donate a {
   }
 
 }
+@charset "UTF-8";
+@font-face {
+  font-family: "Alice";
+  src: url("https://божьянива.рф/assets/fonts/Alice-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("https://божьянива.рф/assets/fonts/Inter-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 #page {
   padding-top: 70px;
   background: #e7e7e7;
@@ -1176,10 +1189,33 @@ li.donate a {
   padding: 5px 12px;
   background: #fff;
 }
-#page .about-thumb.regular_detail h1 {
-  letter-spacing: 1px;
-  line-height: 1.1;
+#page .about-thumb.regular_detail h1.title_txt {
   text-align: center;
+  font-family: "Alice", serif;
+  text-transform: none;
+  color: #223f3f;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+}
+@media (max-width: 991px) {
+  #page .about-thumb.regular_detail h1.title_txt {
+    font-size: 52px !important;
+    line-height: 52px;
+  }
+}
+@media (max-width: 767px) {
+  #page .about-thumb.regular_detail h1.title_txt {
+    font-size: 38px !important;
+    line-height: 38px;
+  }
+}
+@media (max-width: 575px) {
+  #page .about-thumb.regular_detail h1.title_txt {
+    font-size: 36px !important;
+    line-height: 36px;
+  }
 }
 #page .decription.detail {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1197,25 +1233,51 @@ li.donate a {
   font-weight: 400;
 }
 #page .decription.detail p {
-  color: #000 !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 18px;
   margin-bottom: 0px;
+  font-family: Inter, sans-serif;
+  font-size: 90%;
+  color: #414e5c;
+  line-height: 31px;
+}
+@media (max-width: 460px) {
+  #page .decription.detail p {
+    line-height: 28px;
+  }
 }
 #page .decription.detail img {
   max-width: 100%;
 }
-#page .decription.detail h4 {
-  font-size: 1.5rem;
+#page .decription.detail h1, #page .decription.detail h1 span, #page .decription.detail h5, #page .decription.detail h3, #page .decription.detail h4, #page .decription.detail h2, #page .decription.detail h3 b span, #page .decription.detail h3 span, #page .decription.detail h3 b, #page .decription.detail h2 b span, #page .decription.detail h2 span, #page .decription.detail h2 b, #page .decription.detail h4 b span, #page .decription.detail h4 span, #page .decription.detail h4 b {
+  text-align: center;
+  font-family: "Alice", serif;
+  text-transform: none;
+  color: #414e5c;
+  font-size: 35px !important;
+  line-height: 35px;
+  font-weight: 400;
+  letter-spacing: -0.022em;
 }
-#page .decription.detail h3 {
-  font-size: 1.7rem;
+@media (max-width: 991px) {
+  #page .decription.detail h1, #page .decription.detail h1 span, #page .decription.detail h5, #page .decription.detail h3, #page .decription.detail h4, #page .decription.detail h2, #page .decription.detail h3 b span, #page .decription.detail h3 span, #page .decription.detail h3 b, #page .decription.detail h2 b span, #page .decription.detail h2 span, #page .decription.detail h2 b, #page .decription.detail h4 b span, #page .decription.detail h4 span, #page .decription.detail h4 b {
+    font-size: 32px !important;
+    line-height: 32px;
+  }
+}
+@media (max-width: 767px) {
+  #page .decription.detail h1, #page .decription.detail h1 span, #page .decription.detail h5, #page .decription.detail h3, #page .decription.detail h4, #page .decription.detail h2, #page .decription.detail h3 b span, #page .decription.detail h3 span, #page .decription.detail h3 b, #page .decription.detail h2 b span, #page .decription.detail h2 span, #page .decription.detail h2 b, #page .decription.detail h4 b span, #page .decription.detail h4 span, #page .decription.detail h4 b {
+    font-size: 28px !important;
+    line-height: 28px;
+  }
+}
+@media (max-width: 575px) {
+  #page .decription.detail h1, #page .decription.detail h1 span, #page .decription.detail h5, #page .decription.detail h3, #page .decription.detail h4, #page .decription.detail h2, #page .decription.detail h3 b span, #page .decription.detail h3 span, #page .decription.detail h3 b, #page .decription.detail h2 b span, #page .decription.detail h2 span, #page .decription.detail h2 b, #page .decription.detail h4 b span, #page .decription.detail h4 span, #page .decription.detail h4 b {
+    font-size: 30px !important;
+    line-height: 30px;
+  }
 }
 #page .decription.detail h5, #page .decription.detail h3, #page .decription.detail h4 {
-  font-weight: 500;
-  line-height: 1.2;
   margin-bottom: 0.5rem;
-  letter-spacing: 0px;
 }
 
 .back_fixed {
@@ -1272,12 +1334,11 @@ li.donate a {
     display: flex !important;
     position: fixed;
   }
-  #page .decription.detail p {
-    font-size: 18px;
-    font-weight: 400;
-  }
-  #page .decription.detail h5, #page .decription.detail h3, #page .decription.detail h4 {
-    font-size: 20px;
+  #page .decription.detail {
+    /*p {
+        font-size: 18px;
+        font-weight: 400;
+    }*/
   }
 }
 img {
