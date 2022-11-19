@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Regulation;
+use Illuminate\Validation\Rules;
 
 class HelpsController extends Controller
 {
     private $code = 'lip48';
+    private $code1 = 'Lip48';
     private $pref_code = '1xc202hh';
 
     public function helps() {

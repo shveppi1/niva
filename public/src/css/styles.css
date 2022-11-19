@@ -1218,7 +1218,6 @@ li.donate a {
   }
 }
 #page .decription.detail {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-family: Inter, sans-serif;
   color: #000;
   font-size: 20px;
@@ -1234,7 +1233,6 @@ li.donate a {
   font-weight: 400;
 }
 #page .decription.detail p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   margin-bottom: 0px;
   font-family: Inter, sans-serif;
   font-size: 90%;
@@ -1243,13 +1241,13 @@ li.donate a {
 }
 @media (max-width: 460px) {
   #page .decription.detail p {
-    line-height: 28px;
+    line-height: 32px;
     font-size: 20px;
     letter-spacing: 0.6;
   }
   #page .decription.detail span {
     font-size: 20px;
-    line-height: 28px;
+    line-height: 32px;
     letter-spacing: 0.6;
   }
 }
@@ -1282,6 +1280,7 @@ li.donate a {
   #page .decription.detail h1, #page .decription.detail h1 span, #page .decription.detail h5, #page .decription.detail h3, #page .decription.detail h4, #page .decription.detail h2, #page .decription.detail h3 b span, #page .decription.detail h3 span, #page .decription.detail h3 b, #page .decription.detail h2 b span, #page .decription.detail h2 span, #page .decription.detail h2 b, #page .decription.detail h4 b span, #page .decription.detail h4 span, #page .decription.detail h4 b {
     font-size: 30px !important;
     line-height: 30px;
+    color: #0B90C4;
   }
 }
 #page .decription.detail h5, #page .decription.detail h3, #page .decription.detail h4 {

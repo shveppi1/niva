@@ -78,8 +78,25 @@
             <div class="pop_stage">
                 <div class="pop_slide">
                     <div class="pop_content">
+
+                        @if(auth()->user())
+                        <h2>Вы авторизованы на сайте</h2>
+                        <p>Вас еще не добавили в группу с доступом к данному разделу.</p>
+                        <p>Обратитесь к Данилу, либо введите код если есть</p>
+                        @endif
+
+                        <form class="nivaForm" id="code_form" action="">
+                            @csrf
+                            <br />
+                            <h2>Открыть по коду</h2>
+                            <input class="form-control" name="code" type="text" placeholder="xxxxxx">
+                            <input type="submit" class="btn_niva btn_red" value="Отправить код">
+                            <a href="{{route('helps')}}" class="btn_niva btn_empty">Назад</a>
+                        </form>
+
                         @if(!auth()->user())
-                        <h2>Авторизоваться на сайте</h2>
+                                <br>
+                        <h3>или <br/>Авторизоваться на сайте</h3>
                         <form class="nivaForm" method="POST" action="{{ route('login') }}">
                             @csrf
                             <input class="form-control" name="email" type="text" placeholder="Эмейл">
@@ -89,20 +106,8 @@
                                 <a href="{{route('register')}}" class="btn_niva btn_empty">Регистрация</a>
                             </div>
                         </form>
-                        @else
-                            <h2>Вы авторизованы на сайте</h2>
-                            <p>Вас еще не добавили в группу с доступом к данному разделу.</p>
-                            <p>Обратитесь к Данилу, либо введите код если есть</p>
                         @endif
 
-                        <form class="nivaForm" id="code_form" action="">
-                            @csrf
-                            <br />
-                            <p>Открыть по коду</p>
-                            <input class="form-control" name="code" type="text" placeholder="xxxxxx">
-                            <input type="submit" class="btn_niva btn_red" value="Отправить код">
-                            <a href="{{route('helps')}}" class="btn_niva btn_empty">Назад</a>
-                        </form>
                     </div>
                 </div>
             </div>
