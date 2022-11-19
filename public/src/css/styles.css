@@ -1219,6 +1219,7 @@ li.donate a {
 }
 #page .decription.detail {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: Inter, sans-serif;
   color: #000;
   font-size: 20px;
   letter-spacing: 1px;
@@ -1244,10 +1245,12 @@ li.donate a {
   #page .decription.detail p {
     line-height: 28px;
     font-size: 20px;
+    letter-spacing: 0.6;
   }
   #page .decription.detail span {
     font-size: 20px;
     line-height: 28px;
+    letter-spacing: 0.6;
   }
 }
 #page .decription.detail img {

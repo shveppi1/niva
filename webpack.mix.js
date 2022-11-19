@@ -28,7 +28,7 @@ if (mix.inProduction()) {
                 require('autoprefixer'),
             ]
         })
-        .sourceMaps()
+        //.sourceMaps()
         .version();
 } else {
     mix
